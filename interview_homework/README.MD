@@ -7,6 +7,10 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
 - Update the address schema to include a "state" field.
   - Update typescript types to mirror schema types
 
+> Ticke 1 | working screenshot :
+![GraphQL response](./resources/ticket_1/graphql_response.png)
+
+
 > Ticket 2:
 
 - Create a mutation that accepts a username and address and saves it to the addresses.json file.
@@ -29,7 +33,7 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
 
 - Update the logger to log the **required** header 'client' in every log
   - follow the requestId pattern to add client header to the logs.
-
+ v
 > Ticket 6:
 
 - Append the requestId from the context object to the responses.
