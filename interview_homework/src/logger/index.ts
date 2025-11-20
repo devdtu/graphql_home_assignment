@@ -13,13 +13,12 @@ export class Logger {
     });
   }
 
-   private metaInfo(meta?: object) {
-    console.log("line 17\n\n")
-    console.log(meta);
-    console.log(this.client);
-    return { requestId: this.requestId, client: this.client, ...meta };
+  private metaInfo(meta?: object) {
+    return {
+      requestId: this.requestId,
+      client: this.client, ...meta
+    };
   }
-
 
   setRequestId(requestId: string) {
     this.requestId = requestId;

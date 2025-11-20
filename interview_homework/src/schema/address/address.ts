@@ -28,7 +28,7 @@ export const getAddress = async (_: any, args: Args, context: any): Promise<Addr
 
 export const addAddress = async (_: any, args: MutationArgs, context: any): Promise<Address> => {
   context.logger.info('addAddress', 'Enter resolver');
- const addresses = readAddresses();
+  const addresses = readAddresses();
   const username = args.username;
   const address = args.address;
 
@@ -43,7 +43,7 @@ export const addAddress = async (_: any, args: MutationArgs, context: any): Prom
     context.logger.info('addAddress', 'adding address');
     return address;
   }
-  
+
   context.logger.error('addAddress', 'Error adding address');
   throw new GraphQLError('Error adding address');
 };
