@@ -7,7 +7,8 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
 - Update the address schema to include a "state" field.
   - Update typescript types to mirror schema types
 
-> Ticke 1 | working screenshot :
+<p style="color: teal; font-weight: bold;">> Ticket 1 | working screenshot :</p>
+
 ![GraphQL response](./resources/ticket_1/graphql_response.png)
 
 
@@ -18,6 +19,12 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
   - Add types where appropriate (graph and ts)
   - This is a create, not an update or delete. Don't smash existing records.
   - You can use any library or tool to modify the addresses.json file. If you use a library and it has a "get" or "read" function update the "address" resolver to use the same toolset to retrieve records.
+  
+
+<p style="color: teal; font-weight: bold;">> Ticket 2 | working screenshot :</p>
+
+![GraphQL response](./resources/ticket_2/graphql_response.png)
+
 
 > Ticket 3:
 
