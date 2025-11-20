@@ -154,7 +154,7 @@ variables:
 	}
 }
 
-samle response: 
+sample response: 
 
 {
 	"data": {
