@@ -5,7 +5,7 @@ import type { Plugin as YogaPlugin } from 'graphql-yoga';
 
 export const buildHeaders = (): Plugin<ContextType> => {
   return {
-    onParse({ extendContext }) {
+    onParse({ context, extendContext }) {
       const requestId = uuid();
       extendContext({ requestId: requestId });
     },
@@ -26,5 +26,18 @@ export const requireClientHeader = (): YogaPlugin => ({
         )
       );
     }
+  }
+});
+
+export const attachRequestIdMetadata = (): Plugin<ContextType> => ({
+  onExecute({ args }) {
+    // https://the-guild.dev/graphql/envelop/docs/plugins/lifecycle#onexecute:~:text=%7D%2C-,onExecute(%7B%20args%20%7D)%20%7B,%7D,-%7D
+    const ctx = args.contextValue as ContextType;
+    return {
+      onExecuteDone({ result }) {
+        const resultObject = result as { metadata?: Record<string, any> };
+        resultObject.metadata = { requestId: ctx.requestId };
+      },
+    };
   },
 });

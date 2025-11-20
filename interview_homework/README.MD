@@ -19,7 +19,7 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
   - Add types where appropriate (graph and ts)
   - This is a create, not an update or delete. Don't smash existing records.
   - You can use any library or tool to modify the addresses.json file. If you use a library and it has a "get" or "read" function update the "address" resolver to use the same toolset to retrieve records.
-  
+
 
 <p style="color: teal; font-weight: bold;">> Ticket 2 | working screenshot :</p>
 
@@ -64,9 +64,16 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
 
   - hint: <https://the-guild.dev/graphql/envelop/docs/plugins/lifecycle#onexecutedone>
 
+<p style="color: teal; font-weight: bold;">> Ticket 6 | working screenshot :</p>
+
+![GraphQL response](./resources/ticket_3_4_5_6/image.png)
+
+
+
 > Ticket 7:
 
 - After making the updates write/update unit tests to make sure your code is working as intended
+
 
 ### Things to think about
 
