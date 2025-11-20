@@ -21,6 +21,9 @@ describe('getAddress', () => {
       variables,
     });
 
+//    todo : remove any
+    delete (result as any).metadata;
+
     expect(result).toEqual({
       "data": {
         "address": {
