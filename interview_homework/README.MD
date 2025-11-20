@@ -91,3 +91,82 @@ You're tasked with 7 tickets this sprint. 5 of the tickets are enhancements, one
 ### Expectations and notes
 
 We're not expecting something that's highly polished and production ready. The purpose here is to see if you can meet the goals outlined and to evaluate the choices you've made to achieve those goals. To that end, feel free to use AI to **explain** sections of code to you, but don't use it to actually write the code. It's important that you understand what's going on in the code and can explain your choices.
+
+Graphql Queries used : 
+
+``` query GetAddress($username: String!) {
+  address(username: $username) {
+    street
+    city
+    zipcode
+    state
+  }
+}
+
+variables: 
+{
+	"username": "Dev"
+}
+
+Note: add client header in request
+
+
+Sample response: 
+
+{
+	"data": {
+		"address": {
+			"street": "huntersglen",
+			"city": "plainsboro",
+			"zipcode": "08536",
+			"state": "New Jersey"
+		}
+	},
+	"metadata": {
+		"requestId": "cfcb4ca8-4f25-4174-8575-b5a0c8089e4d"
+	}
+}
+
+```
+
+Mutation used : 
+
+```
+mutation addAddress($username: String!, $address: AddressInput!) {
+  addAddress(username: $username, address: $address) {
+    street
+    city
+    zipcode
+    state
+  }
+}
+
+
+variables: 
+
+{
+	"username": "Dev",
+	"address": {
+		"street": "huntersglen",
+		"city": "plainsboro",
+		"zipcode": "08536",
+		"state": "New Jersey"
+	}
+}
+
+samle response: 
+
+{
+	"data": {
+		"addAddress": {
+			"street": "huntersglen",
+			"city": "plainsboro",
+			"zipcode": "08536",
+			"state": "New Jersey"
+		}
+	},
+	"metadata": {
+		"requestId": "598c51be-91db-4037-80a0-6e2cb661863f"
+	}
+}
+```
